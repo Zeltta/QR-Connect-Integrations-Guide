@@ -2,7 +2,7 @@
 
 To create data integrations, dashboards and reports that go beyond QR Connect's current features, you can import your data into data analysis programs using an API request.
 
-This guide uses Google sheets but the basic principles will also apply to other data analysis programs like Excel and Power BI.
+This guide uses Google sheets but the basic principles will also apply to other data analysis programs like Microsoft's Excel and Power BI.
 
 <br/>
 
@@ -145,3 +145,5 @@ function printDataToRows(data) {
 7. All done! You can now fetch QR Connect views and submissions data and use it however you wish 🎉. 
  
 You can also set up your script to fetch automatically at specific intervals by going back into your script and setting up a trigger.
+
+
