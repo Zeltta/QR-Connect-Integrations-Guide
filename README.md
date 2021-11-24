@@ -142,6 +142,6 @@ function printDataToRows(data) {
 
 6. Now go back to your sheet. You will now see a new menu item called `QR Connect`. Open the new menu and click on `Fetch data`.
 
-7. All done! You can now use fetch this data and use it however you wish 🎉. 
+7. All done! You can now fetch QR Connect views and submissions data and use it however you wish 🎉. 
  
 You can also set up your script to fetch automatically at specific intervals by going back into your script and setting up a trigger.
