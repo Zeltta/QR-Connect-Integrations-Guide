@@ -143,6 +143,6 @@ function printDataToRows(data) {
 
 7. All done! You can now use fetch this data and use it however you wish 🎉. 
 
-## bonus tip
+## Bonus tip
 
 You can also set up your script to fetch automatically at specific intervals by going back into your script and setting up a trigger.
