@@ -33,7 +33,7 @@ This guide uses Google sheets but the basic principles will also apply to other 
 3. Copy and paste the code below into your apps script:
 
 ```js
-const API_KEY = "REPLACE_WITH_YOUR_API_KEY"; // <-- replace with your key that you just created. Keep the double quotes (") on each side.
+const API_KEY = "REPLACE_WITH_YOUR_API_KEY"; // <-- replace with your key that you just created.
 const API_URL = "https://api.qrconnect.nz/views";
 
 // Function that adds 'Fetch data' button to spreadsheet.
@@ -135,7 +135,7 @@ function printDataToRows(data) {
 }
 ```
 
-4. You only need to make one change. Paste in your new API key into the top line to replace the `REPLACE_WITH_YOUR_API_KEY` bit.
+4. You only need to make one change. Paste in your new API key into the top line to replace the `REPLACE_WITH_YOUR_API_KEY` bit.  Keep the double quotes (") on each side.
 
 5. Save your script and run it to make sure it works. You will be asked for permission to run it, accept the permissions.
 
