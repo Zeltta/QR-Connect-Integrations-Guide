@@ -1,8 +1,7 @@
-# Custom data integrations
 
-To create data integrations, dashboards and reports that go beyond QR Connect's current features, you can import your data into data analysis programs using an API request.
+To create dashboards and reports that go beyond QR Connect's current features, you can import your data into data analysis programs using an API request.
 
-This guide uses Google sheets but the basic principles will also apply to other data analysis programs like Microsoft's Excel and Power BI.
+This guide uses Google sheets but the basic principles will also apply to other data analysis programs like Excel and Power BI.
 
 <br/>
 
@@ -13,9 +12,9 @@ This guide uses Google sheets but the basic principles will also apply to other 
 
 <br/>
 
-# Creating an API Key
+# Create an API Key
 
-> API Keys are long random combinations of letters and numbers that are extremely hard to guess. They enable you to securely access your QR Connect data from applications like Google Sheets, Excel etc.
+> API Keys are random combinations of letters and numbers that are extremely hard to guess. They enable secure access your QR Connect data from applications like Google Sheets, Excel etc.
 
 1. Go to your company page and click on `Integrations` to navigate to the integrations screen.
 2. Click the `Create new API key` button
@@ -25,20 +24,20 @@ This guide uses Google sheets but the basic principles will also apply to other 
 
 <br/>
 
-# Importing data into Google Sheets
+# Import data into Google Sheets
 
 1. Create a new google sheet.
 
 2. In your new google sheet, open the `Tools` menu and then click on `Script Editor`
 
-3. Copy and paste the code below into your apps script.
+3. Copy and paste the code below into your apps script:
 
 ```js
 const API_KEY = "REPLACE_WITH_YOUR_API_KEY"; // <-- replace with your key that you just created. Keep the double quotes (") on each side.
 const API_URL = "https://api.qrconnect.nz/views";
 
 // Function that adds 'Fetch data' button to spreadsheet.
-async function onOpen() {
+function onOpen() {
   const ui = SpreadsheetApp.getUi();
   ui.createMenu("QR Connect").addItem("Fetch data", "fetchData").addToUi();
 }
@@ -136,14 +135,14 @@ function printDataToRows(data) {
 }
 ```
 
-4. You only need to make one change to the code. Paste in your API key into the top line to replace the `REPLACE_WITH_YOUR_API_KEY` part.
+4. You only need to make one change. Paste in your new API key into the top line to replace the `REPLACE_WITH_YOUR_API_KEY` bit.
 
 5. Save your script and run it to make sure it works. You will be asked for permission to run it, accept the permissions.
 
 6. Now go back to your sheet. You will now see a new menu item called `QR Connect`. Open the new menu and click on `Fetch data`.
 
-7. All done! You can now fetch QR Connect views and submissions data and use it however you wish 🎉. 
- 
+7. All done! You can now use fetch this data and use it however you wish 🎉. 
+
+## bonus tip
+
 You can also set up your script to fetch automatically at specific intervals by going back into your script and setting up a trigger.
-
-
